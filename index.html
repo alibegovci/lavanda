@@ -2,16 +2,86 @@
 <html lang="hr">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sonjina Lavanda</title>
   <style>
-    body { font-family: Arial; max-width: 800px; margin: auto; }
-    img { max-width: 100%; height: auto; }
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 10px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    header img.logo {
+      width: 120px; /* veličina loga */
+      height: auto;
+      border-radius: 10px;
+    }
+    h1 {
+      margin-top: 10px;
+      color: #6b4f4f;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      justify-items: center;
+      margin-bottom: 40px;
+    }
+    .gallery img {
+      width: 3cm;
+      height: 3cm;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .contact {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      max-width: 400px;
+      margin: auto;
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+    .contact strong {
+      color: #6b4f4f;
+    }
+    .contact a {
+      color: #6b4f4f;
+      text-decoration: none;
+    }
+    .contact a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
-  <h1>Sonjina Lavanda</h1>
-  <p>Ovo je stranica sa slikama lavande.</p>
-  <img src="images/lavanda1.jpg" alt="Lavanda" />
-  <img src="images/lavanda2.jpg" alt="Lavanda polje" />
+
+  <header>
+    <!-- Stavi ovdje svoj logo, npr. logo.png u folder images -->
+    <img src="images/logo.png" alt="Sonjina Lavanda Logo" class="logo" />
+    <h1>Sonjina Lavanda</h1>
+  </header>
+
+  <section class="gallery">
+    <img src="images/slika1.jpg" alt="Lavanda 1" />
+    <img src="images/slika2.jpg" alt="Lavanda 2" />
+    <img src="images/slika3.jpg" alt="Lavanda 3" />
+    <img src="images/slika4.jpg" alt="Lavanda 4" />
+    <img src="images/slika5.jpg" alt="Lavanda 5" />
+  </section>
+
+  <section class="contact">
+    <p><strong>Telefon:</strong> +385 91 123 4567</p>
+    <p><strong>Email:</strong> <a href="mailto:sonjinalavanda@example.com">sonjinalavanda@example.com</a></p>
+  </section>
+
 </body>
 </html>
