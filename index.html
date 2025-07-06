@@ -71,6 +71,7 @@
       box-shadow: none;
       max-width: 400px;
       margin: auto;
+      margin-bottom: 80px; /* prostor ispod za gumb */
       font-size: 1.1rem;
       line-height: 1.5;
       color: white;
@@ -102,11 +103,10 @@
     .whatsapp-button:hover {
       background-color: #1ebe57;
     }
-
-    /* Stil za gumb Sljedeća stranica u desnom donjem kutu */
+    /* Gumb za sljedeću stranicu */
     #next-button {
       position: fixed;
-      bottom: 20px;
+      bottom: 40px; /* malo podignut da ne prekriva whatsapp */
       right: 20px;
       padding: 12px 16px;
       background-color: #007bff;
@@ -147,7 +147,7 @@
   <div id="lightbox" onclick="closeLightbox()">
     <img src="" alt="Povećana slika" />
   </div>
-  <section class="contact">
+<section class="contact">
     <p><strong>Telefon:</strong> +387 63 844 452</p>
     <p><strong>Email:</strong> <a href="mailto:lavandula.soniae@hotmail.com">lavandula.soniae@hotmail.com</a></p>
     <a 
@@ -161,6 +161,7 @@
     </a>
   </section>
   
+  <!-- Gumb za sljedeću stranicu -->
   <button id="next-button" onclick="location.href='sljedeca stranica.html'">Sljedeća stranica</button>
 
   <script>
@@ -176,5 +177,4 @@
 
 </body>
 </html>
-
   
