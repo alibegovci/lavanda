@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Podstranica sa slikama</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 600px;
+      margin: auto;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    .slika-blok {
+      margin-bottom: 30px;
+    }
+    /* Lightbox stil */
+    #lightbox {
+      position: fixed;
+      top:0; left:0;
+      width:100%; height:100%;
+      background: rgba(0,0,0,0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Podstranica: Slike i objašnjenja</h1>
+<a href="index.html">Natrag na početnu</a>
+  
+  <div class="slika-blok">
+    <img src="slike/slika1.jpg" alt="Opis slike 1" loading="lazy" onclick="openLightbox(this.src)">
+    <p>Ovo je slika 1 – ovdje pišeš objašnjenje što prikazuje slika.</p>
+  </div>
+
+  <div class="slika-blok">
+    <img src="slike/slika2.jpg" alt="Opis slike 2" loading="lazy" onclick="openLightbox(this.src)">
+    <p>Ovo je slika 2 – ovdje pišeš objašnjenje što prikazuje slika.</p>
+  </div>
+
+  <a href="index.html">Natrag na početnu</a>
+
+  <!-- Lightbox element -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <img src="" alt="Povećana slika">
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById("lightbox").style.display = "flex";
+      document.querySelector("#lightbox img").src = src;
+    }
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
+</body>
+</html>
