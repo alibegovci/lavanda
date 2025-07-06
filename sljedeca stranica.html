@@ -1,84 +1,23 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
-  <meta charset="UTF-8">
-  <title>Podstranica sa slikama</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lavanda</title>
   <style>
     body {
       font-family: sans-serif;
-      max-width: 600px;
-      margin: auto;
-      color: white;
-      background: url('images/lavanda.jpg') no-repeat center center fixed;
-      background-size: cover;
-      background-color: transparent;
+      margin: 0;
+      padding: 20px;
     }
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin-bottom: 10px;
-      cursor: pointer;
-    }
-    .slika-blok {
-      margin-bottom: 30px;
-    }
-    a {
-      color: white;
-    }
-    a[href="index.html"] {
-      color: #0000ff; /* jaka plava boja */
-      font-weight: bold;
-    }
-    /* Lightbox stil */
-    #lightbox {
+
+    /* Stil za gumb natrag */
+    #back-button {
       position: fixed;
-      top:0; left:0;
-      width:100%; height:100%;
-      background: rgba(0,0,0,0.8);
-      display: none;
-      justify-content: center;
-      align-items: center;
-    }
-    #lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-    }
-  </style>
-</head>
-<body>
-  <h1>Nesto malo o nasim biljkama</h1>
-
-  <div class="slika-blok">
-    <img src="images/slika1.jpg" alt="Opis slike 1" loading="lazy" onclick="openLightbox(this.src)">
-    <p>Biljke su čudesni dar prirode. Njihova eterična ulja skrivaju snagu mirisa, ljekovitosti i harmonije. Svaka kap ulja nosi koncentriranu energiju biljke iz koje potječe, bilo da umiruje, osvježava ili jača duh i tijelo. Zato su eterična ulja oduvijek bila dio prirodne medicine, aromaterapije i svakodnevne njege, povezujući nas s tišinom, snagom i mudrošću prirode.</p>
-  </div>
-
-  <div class="slika-blok">
-    <img src="images/slika2.jpg" alt="Opis slike 2" loading="lazy" onclick="openLightbox(this.src)">
-    <p>Od ovih biljaka nastaje naš konačni proizvod koji s ljubavlju donosimo za vaše tijelo. Svaka kap je pažljivo odabrana kako bi vam pružila prirodnu njegu, snagu i ravnotežu koju zaslužujete.</p>
-  </div>
-
-  <!-- Lightbox element -->
-  <div id="lightbox" onclick="closeLightbox()">
-    <img src="" alt="Povećana slika">
-  </div>
-
-  <script>
-    function openLightbox(src) {
-      document.getElementById("lightbox").style.display = "flex";
-      document.querySelector("#lightbox img").src = src;
-    }
-    function closeLightbox() {
-      document.getElementById("lightbox").style.display = "none";
-    }
-<style>
-    #back-home {
-      position: fixed;
-      bottom: 20px; /* malo iznad dna */
-      left: 20px;   /* lijevo */
+      bottom: 20px;
+      left: 20px;
       padding: 12px 16px;
-      background-color: #007bff; /* plava */
+      background-color: #007bff;
       color: white;
       border: none;
       border-radius: 8px;
@@ -88,18 +27,65 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     }
 
-    #back-home:hover {
-      background-color: #0056b3; /* tamnija plava na hover */
+    #back-button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Stil za malu sliku */
+    .small-image {
+      width: 3cm;
+      height: 3cm;
+      object-fit: cover;
+      cursor: pointer;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    /* Lightbox overlay */
+    #lightbox {
+      display: none;
+      position: fixed;
+      z-index: 10000;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
     }
   </style>
 </head>
 <body>
 
-  <!-- Tvoj sadržaj stranice ovdje -->
+  <h1>Lavanda</h1>
 
-  <button id="back-home" onclick="location.href='index.html'">Početna</button>
+  <img src="lavanda.jpg" alt="Lavanda" class="small-image" onclick="openLightbox(this.src)" />
 
-   <a href="index.html">Natrag na početnu</a> 
+  <!-- Lightbox overlay -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <img src="" alt="Povećana slika" />
+  </div>
+
+  <!-- Gumb za povratak na prethodnu stranicu -->
+  <button id="back-button" onclick="history.back()">Natrag</button>
+
+  <script>
+    function openLightbox(src) {
+      document.querySelector('#lightbox img').src = src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
   </script>
+
 </body>
 </html>
