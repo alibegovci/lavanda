@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lavandula Soniae</title>
-  <meta name="description" content="Sonjina Lavanda - prirodni sapuni od maslinovog ulja i eteričnog ulja lavande, ručno rađeni s ljubavlju u Dalmaciji.">
   <style>
     body {
       background-image: url('/images/lavanda.jpg');
@@ -13,28 +12,24 @@
       background-repeat: no-repeat;
       background-attachment: fixed;
       font-family: Arial, sans-serif;
-      color: white;
-      margin: 0;
-      padding: 0;
-    }
-    .wrapper {
       max-width: 900px;
       margin: 20px auto;
       padding: 10px;
-      background-color: transparent;
+      background-color: transparent; /* nema bijele pozadine */
+      color: white; /* bijeli tekst */
     }
     header {
       text-align: center;
       margin-bottom: 30px;
     }
     header img.logo {
-      width: 120px;
+      width: 120px; /* veličina loga */
       height: auto;
       border-radius: 10px;
     }
     h1 {
       margin-top: 10px;
-      color: #6b4f4f;
+      color: white; /* bijeli naslov */
     }
     .gallery {
       display: grid;
@@ -51,88 +46,52 @@
       box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
     .contact {
-      background: #fff;
+      background: transparent; /* nema bijele pozadine */
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      box-shadow: none;
       max-width: 400px;
       margin: auto;
       font-size: 1.1rem;
       line-height: 1.5;
-      text-align: center;
+      color: white; /* bijeli tekst u kontaktu */
     }
     .contact strong {
-      color: #6b4f4f;
+      color: white;
     }
     .contact a {
-      color: #6b4f4f;
+      color: white;
       text-decoration: none;
     }
     .contact a:hover {
       text-decoration: underline;
     }
-    .whatsapp-button {
-      display: inline-block;
-      margin-top: 15px;
-      background-color: #25D366;
-      color: white;
-      padding: 12px 20px;
-      font-size: 1.1rem;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      transition: background-color 0.3s ease;
-    }
-    .whatsapp-button:hover {
-      background-color: #1ebe57;
-    }
-    @media (max-width: 600px) {
-      .gallery {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    @media (max-width: 400px) {
-      .gallery {
-        grid-template-columns: 1fr;
-      }
-    }
   </style>
 </head>
 <body>
-  <div class="wrapper">
 
-    <header>
-      <img src="images/logo.png" alt="Sonjina Lavanda Logo" class="logo" />
-      <h1>Sonjina Lavanda</h1>
-    </header>
+  <header>
+    <!--logo.png-->
+    <img src="images/logo.png" alt="Sonjina Lavanda Logo" class="logo" />
+    <h1>Sonjina Lavanda</h1>
+  </header>
 
-    <p>
-      Lavanda sapun naš je prirodni proizvod ručno izrađen od najfinijeg maslinovog ulja i čistog eteričnog ulja lavande. Nježno čisti kožu, njeguje je i ostavlja umirujući miris koji opušta tijelo i um. Idealan je za svakodnevnu upotrebu, posebno za suhu i osjetljivu kožu. Uživajte u daru prirode i osjetite istinsku svježinu Dalmacije u svakom pranju.
-    </p>
+  <p>
+    Lavanda sapun naš je prirodni proizvod ručno izrađen od najfinijeg maslinovog ulja i čistog eteričnog ulja lavande. Nježno čisti kožu, njeguje je i ostavlja umirujući miris koji opušta tijelo i um. Idealan je za svakodnevnu upotrebu, posebno za suhu i osjetljivu kožu. Uživajte u daru prirode i osjetite istinsku svježinu Dalmacije u svakom pranju.
+  </p>
 
-    <section class="gallery">
-      <img src="images/slika1.jpg" alt="Lavanda 1" />
-      <img src="images/slika2.jpg" alt="Lavanda 2" />
-      <img src="images/slika3.jpg" alt="Lavanda 3" />
-      <img src="images/slika4.jpg" alt="Lavanda 4" />
-      <img src="images/slika5.jpg" alt="Lavanda 5" />
-    </section>
+  <section class="gallery">
+    <img src="images/slika1.jpg" alt="Lavanda 1" />
+    <img src="images/slika2.jpg" alt="Lavanda 2" />
+    <img src="images/slika3.jpg" alt="Lavanda 3" />
+    <img src="images/slika4.jpg" alt="Lavanda 4" />
+    <img src="images/slika5.jpg" alt="Lavanda 5" />
+  </section>
 
-    <section class="contact">
-      <p><strong>Telefon:</strong> +387 63 844 452</p>
-      <p><strong>Email:</strong> <a href="mailto:lavandula.soniae@hotmail.com">lavandula.soniae@hotmail.com</a></p>
-      <a 
-        href="https://wa.me/38763844452?text=Pozdrav%20Sonja%2C%20zanima%20me%20vaš%20lavanda%20sapun." 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        class="whatsapp-button"
-        aria-label="Pošalji poruku na WhatsApp"
-      >
-        Kontaktirajte nas na WhatsApp
-      </a>
-    </section>
+  <section class="contact">
+    <p><strong>Telefon:</strong> +387 63 844 452</p>
+    <p><strong>Email:</strong> <a href="mailto:lavandula.soniae@hotmail.com">lavandula.soniae@hotmail.com</a></p>
+  </section>
 
-  </div>
 </body>
 </html>
