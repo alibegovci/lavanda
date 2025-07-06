@@ -44,6 +44,25 @@
       object-fit: cover;
       border-radius: 8px;
       box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+    /* Lightbox overlay */
+    #lightbox {
+      display: none;
+      position: fixed;
+      z-index: 10000;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
     }
     .contact {
       background: transparent;
@@ -97,18 +116,23 @@
   </p>
 
   <section class="gallery">
-    <img src="images/slika1.jpg" alt="Lavanda 1" />
-    <img src="images/slika2.jpg" alt="Lavanda 2" />
-    <img src="images/slika3.jpg" alt="Lavanda 3" />
-    <img src="images/slika4.jpg" alt="Lavanda 4" />
-    <img src="images/slika5.jpg" alt="Lavanda 5" />
+    <img src="images/slika1.jpg" alt="Lavanda 1" onclick="openLightbox(this.src)" />
+    <img src="images/slika2.jpg" alt="Lavanda 2" onclick="openLightbox(this.src)" />
+    <img src="images/slika3.jpg" alt="Lavanda 3" onclick="openLightbox(this.src)" />
+    <img src="images/slika4.jpg" alt="Lavanda 4" onclick="openLightbox(this.src)" />
+    <img src="images/slika5.jpg" alt="Lavanda 5" onclick="openLightbox(this.src)" />
   </section>
+
+  <!-- Lightbox overlay -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <img src="" alt="Povećana slika" />
+  </div>
 
   <section class="contact">
     <p><strong>Telefon:</strong> +387 63 844 452</p>
     <p><strong>Email:</strong> <a href="mailto:lavandula.soniae@hotmail.com">lavandula.soniae@hotmail.com</a></p>
     <a 
-      href="https://wa.me/38763844452?text=Pozdrav%20Sonja%2C%20zanima%20me%20vaš%20lavanda%20sapun." 
+      href="https://wa.me/38763844452?text=Pozdrav%20Sonja%2C%20zanima%20me%20vaš%20lavanda%20sapun."
       target="_blank" 
       rel="noopener noreferrer" 
       class="whatsapp-button"
@@ -118,7 +142,18 @@
     </a>
   </section>
   
-    <a href="sljedeca stranica.html" style="display: block; text-align: right;">Sljedeća stranica</a>                    
+  <a href="sljedeca stranica.html" style="display: block; text-align: right;">Sljedeća stranica</a>
+
+  <script>
+    function openLightbox(src) {
+      document.querySelector('#lightbox img').src = src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
 
 </body>
 </html>
