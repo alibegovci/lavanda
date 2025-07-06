@@ -8,6 +8,10 @@
       font-family: sans-serif;
       max-width: 600px;
       margin: auto;
+      color: white;
+      background: url('images/logo.png') no-repeat center center fixed;
+      background-size: cover;
+      background-color: transparent;
     }
     img {
       max-width: 100%;
@@ -18,6 +22,13 @@
     }
     .slika-blok {
       margin-bottom: 30px;
+    }
+    a {
+      color: white;
+    }
+    a[href="index.html"] {
+      color: #0000ff; /* jaka plava boja */
+      font-weight: bold;
     }
     /* Lightbox stil */
     #lightbox {
@@ -37,7 +48,7 @@
 </head>
 <body>
   <h1>Nesto malo o nasim biljkama</h1>
-  
+
   <div class="slika-blok">
     <img src="images/slika1.jpg" alt="Opis slike 1" loading="lazy" onclick="openLightbox(this.src)">
     <p>Biljke su čudesni dar prirode. Njihova eterična ulja skrivaju snagu mirisa, ljekovitosti i harmonije. Svaka kap ulja nosi koncentriranu energiju biljke iz koje potječe, bilo da umiruje, osvježava ili jača duh i tijelo. Zato su eterična ulja oduvijek bila dio prirodne medicine, aromaterapije i svakodnevne njege, povezujući nas s tišinom, snagom i mudrošću prirode.</p>
