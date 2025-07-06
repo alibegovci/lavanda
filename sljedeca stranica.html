@@ -59,8 +59,6 @@
     <p>Od ovih biljaka nastaje naš konačni proizvod koji s ljubavlju donosimo za vaše tijelo. Svaka kap je pažljivo odabrana kako bi vam pružila prirodnu njegu, snagu i ravnotežu koju zaslužujete.</p>
   </div>
 
-  <a href="index.html">Natrag na početnu</a>
-
   <!-- Lightbox element -->
   <div id="lightbox" onclick="closeLightbox()">
     <img src="" alt="Povećana slika">
@@ -74,6 +72,34 @@
     function closeLightbox() {
       document.getElementById("lightbox").style.display = "none";
     }
+<style>
+    #back-home {
+      position: fixed;
+      bottom: 20px; /* malo iznad dna */
+      left: 20px;   /* lijevo */
+      padding: 12px 16px;
+      background-color: #007bff; /* plava */
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      z-index: 9999;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    #back-home:hover {
+      background-color: #0056b3; /* tamnija plava na hover */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Tvoj sadržaj stranice ovdje -->
+
+  <button id="back-home" onclick="location.href='index.html'">Početna</button>
+
+    
   </script>
 </body>
 </html>
